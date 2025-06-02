@@ -20,3 +20,6 @@ We estimate time-varying correlations using a **DCC-GARCH** framework and propos
 - Re-enter once correlation mean-reverts
 
 We evaluate the strategy’s portfolio P&L, volatility reduction, Sharpe ratio, and tail risk (via Monte Carlo VaR/ES simulation).
+
+**Note**  
+The dataset used in this project is not included in the repository due to licensing restrictions. You can replicate the results by applying the models to your own high-frequency intraday data or similar datasets.
