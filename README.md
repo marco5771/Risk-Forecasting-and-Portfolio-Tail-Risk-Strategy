@@ -1,10 +1,10 @@
 # Risk Forecasting and Portfolio Tail Risk  
 ## Realized Volatility Modeling & Correlation-Based Strategy
 
-This project explores univariate and bivariate financial risk modeling using high-frequency data. We replicate and evaluate various models for realized volatility forecasting, compute Value-at-Risk (VaR) and Expected Shortfall (ES), and design a simple trading strategy based on time-varying correlations between SPX and STOXX50.
+This project explores univariate and bivariate financial risk modeling using high-frequency data. It replicates and evaluates various models for realized volatility forecasting, computes Value-at-Risk (VaR) and Expected Shortfall (ES), and designs a simple trading strategy based on time-varying correlations between SPX and STOXX50.
 
 ### Part 1: Univariate Realized Volatility Forecasting
-We model and forecast daily realized volatility using:
+Daily realized volatility is modeled using:
 
 - **ARMA(1,1)** on log-realized variance (baseline short-memory benchmark)
 - **HAR model** (Corsi, 2009) capturing long-memory behavior
@@ -14,12 +14,12 @@ We model and forecast daily realized volatility using:
 Each model is evaluated based on in-sample fit, out-of-sample forecasting accuracy (MSE, QLIKE), and its suitability for downstream risk estimation (VaR, ES).
 
 ### Part 2: Correlation-Based Trading Strategy
-We estimate time-varying correlations using a **DCC-GARCH** framework and propose a regime-switching strategy:
+Time-varying correlations are estimated using a **DCC-GARCH** framework and a regime-switching strategy is proposed:
 - Stay long SPX and STOXX50
 - Exit the market when correlation exceeds a high threshold
 - Re-enter once correlation mean-reverts
 
-We evaluate the strategy’s portfolio P&L, volatility reduction, Sharpe ratio, and tail risk (via Monte Carlo VaR/ES simulation).
+The strategy’s portfolio P&L, volatility reduction, Sharpe ratio, and tail risk (via Monte Carlo VaR/ES simulation) are then evaluated.
 
 **Note**  
 The dataset used in this project is not included in the repository due to licensing restrictions. You can replicate the results by applying the models to your own high-frequency intraday data or similar datasets.
